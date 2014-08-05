@@ -11,8 +11,24 @@
   <div class="container">
 
   <div class="row">
-    <div class="col-lg-8"></div>
-    <div class="col-lg-4"> <%= link_to "Sign in with Twitter", "auth/twitter" %> </div>
+    <div class="col-lg-8">
+      <% if current_user %>
+      <img src="<%= current_user.image %>">
+
+      <% end %>
+    </div>
+    <div class="col-lg-4">
+
+        <div id="user_nav">
+          <% if current_user %>
+            Signed in as <%= current_user.name %>
+            <%= link_to "Sign out", signout_url, :method => 'delete' %>
+          <% else %>
+            <%= link_to "Sign in with Twitter", "/auth/twitter"%>
+          <% end %>
+        </div>
+
+    </div>
   </div>
 
 <%= yield %>

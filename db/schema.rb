@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140805213551) do
+ActiveRecord::Schema.define(version: 20140805220335) do
 
   create_table "gratches", force: true do |t|
     t.integer  "host_id"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20140805213551) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
 end
