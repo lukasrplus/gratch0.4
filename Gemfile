@@ -16,6 +16,9 @@ group :production do
   gem 'rails_12factor'
 end
 
+# Omniauth
+gem 'omniauth-twitter'
+
 # Bootstrap SASS
 gem 'bootstrap-sass', '~> 3.2.0'
 
