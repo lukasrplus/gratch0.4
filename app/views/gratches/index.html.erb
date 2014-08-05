@@ -1,0 +1,43 @@
+<h1>Listing gratches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Host</th>
+      <th>Bro1</th>
+      <th>Bro2</th>
+      <th>Bro3</th>
+      <th>Bro4</th>
+      <th>Datetime</th>
+      <th>City</th>
+      <th>Adress</th>
+      <th>Zipcode</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gratches.each do |gratch| %>
+      <tr>
+        <td><%= gratch.host_id %></td>
+        <td><%= gratch.bro1_id %></td>
+        <td><%= gratch.bro2_id %></td>
+        <td><%= gratch.bro3_id %></td>
+        <td><%= gratch.bro4_id %></td>
+        <td><%= gratch.datetime %></td>
+        <td><%= gratch.city %></td>
+        <td><%= gratch.adress %></td>
+        <td><%= gratch.zipcode %></td>
+        <td><%= link_to 'Show', gratch %></td>
+        <td><%= link_to 'Edit', edit_gratch_path(gratch) %></td>
+        <td><%= link_to 'Destroy', gratch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gratch', new_gratch_path %>

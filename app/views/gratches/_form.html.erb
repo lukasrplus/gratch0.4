@@ -1,0 +1,53 @@
+<%= form_for(@gratch) do |f| %>
+  <% if @gratch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gratch.errors.count, "error") %> prohibited this gratch from being saved:</h2>
+
+      <ul>
+      <% @gratch.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :host_id %><br>
+    <%= f.number_field :host_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bro1_id %><br>
+    <%= f.number_field :bro1_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bro2_id %><br>
+    <%= f.number_field :bro2_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bro3_id %><br>
+    <%= f.number_field :bro3_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bro4_id %><br>
+    <%= f.number_field :bro4_id %>
+  </div>
+  <div class="field">
+    <%= f.label :datetime %><br>
+    <%= f.datetime_select :datetime %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :adress %><br>
+    <%= f.text_field :adress %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.number_field :zipcode %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

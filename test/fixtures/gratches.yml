@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  host_id: 1
+  bro1_id: 1
+  bro2_id: 1
+  bro3_id: 1
+  bro4_id: 1
+  datetime: 2014-08-05 16:42:39
+  city: MyString
+  adress: MyString
+  zipcode: 1
+
+two:
+  host_id: 1
+  bro1_id: 1
+  bro2_id: 1
+  bro3_id: 1
+  bro4_id: 1
+  datetime: 2014-08-05 16:42:39
+  city: MyString
+  adress: MyString
+  zipcode: 1
