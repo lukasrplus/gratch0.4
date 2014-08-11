@@ -24,7 +24,8 @@
             Signed in as <%= current_user.name %>
             <%= link_to "Sign out", signout_url, :method => 'delete' %>
           <% else %>
-            <%= link_to "Sign in with Twitter", "/auth/twitter"%>
+            <%= link_to "Sign in with Twitter", "/auth/twitter"%> <br>
+            <%= link_to "Sign in with Facebook", "/auth/facebook" %>
           <% end %>
         </div>
 

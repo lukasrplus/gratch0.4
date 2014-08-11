@@ -6,11 +6,25 @@ class User < ActiveRecord::Base
 
   def self.create_from_omniauth(auth)
     create! do |user|
-      user.provider = auth["provider"]
-      user.uid = auth["uid"]
-      user.name = auth["info"]["nickname"]
-      user.image = auth["info"]["image"]
+
+          if auth["provider"] == "twitter"
+            user.provider = auth["provider"]
+            user.uid = auth["uid"]
+            user.name = auth["info"]["nickname"]
+            user.image = auth["info"]["image"]
+          end
+
+          if auth["provider"] == "facebook"
+            user.provider = auth["provider"]
+            user.uid = auth["uid"]
+            user.name = auth["info"]["name"]
+            user.image = user.image = auth["info"]["image"]
+
+          end
+
     end
+
+
   end
 
 end

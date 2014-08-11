@@ -18,6 +18,7 @@ end
 
 # Omniauth
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 # Bootstrap SASS
 gem 'bootstrap-sass', '~> 3.2.0'
