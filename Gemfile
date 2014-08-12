@@ -20,6 +20,9 @@ end
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
+# Koala
+gem 'koala'
+
 # Bootstrap SASS
 gem 'bootstrap-sass', '~> 3.2.0'
 

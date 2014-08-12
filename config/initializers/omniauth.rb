@@ -17,7 +17,7 @@ end
   provider :twitter, API_KEY, API_SECRET
 
   provider :facebook, FACEBOOK_APP_ID, FACEBOOK_SECRET,
-            :scope => 'email,user_birthday,read_stream', :display => 'popup',
+            :scope => 'email,public_profile,user_friends', :display => 'page',
             :info_fields => 'first_name, gender, location',
             :image_size => {:width => '400', :height => '400'}
 
