@@ -19,18 +19,35 @@
     </div>
     <div class="col-lg-4">
 
-        <div id="user_nav">
+        <div class="row">
+
+          <div id="user_nav">
+            <% if current_user %>
+              Signed in as <%= current_user.name %>
+              <%= link_to "Sign out", signout_url, :method => 'delete' %>
+            <% else %>
+              <%= link_to "Sign in with Twitter", "/auth/twitter"%> <br>
+              <%= link_to "Sign in with Facebook", "/auth/facebook" %>
+            <% end %>
+          </div>
+
+        </div>
+
+        <div class="row">
+
           <% if current_user %>
-            Signed in as <%= current_user.name %>
-            <%= link_to "Sign out", signout_url, :method => 'delete' %>
-          <% else %>
-            <%= link_to "Sign in with Twitter", "/auth/twitter"%> <br>
-            <%= link_to "Sign in with Facebook", "/auth/facebook" %>
+            <h2>Here is a list of your Facebook Friends who also use Gratch.us</h2>
+            <% current_user.facebook.get_connections("me", "friends").each do |friend| %>
+            <h3><%= friend["name"] %></h2>
+            <% end %>
           <% end %>
+
         </div>
 
     </div>
   </div>
+
+
 
 <%= yield %>
 
