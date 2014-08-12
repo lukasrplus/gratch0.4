@@ -17,9 +17,10 @@ class User < ActiveRecord::Base
           if auth["provider"] == "facebook"
             user.provider = auth["provider"]
             user.uid = auth["uid"]
-            user.name = auth["info"]["name"]
+            user.name = auth.extra.raw_info.first_name
+            user.gender = auth.extra.raw_info.gender
             user.image = auth["info"]["image"]
-            user.city = auth["info_field"]
+            user.oauth_token = auth["credentials"]["token"]
 
           end
 
