@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
             user.uid = auth["uid"]
             user.name = auth.extra.raw_info.first_name
             user.gender = auth.extra.raw_info.gender
+            # user.city = auth.extra.raw_info.location.name
             user.image = auth["info"]["image"]
             user.oauth_token = auth["credentials"]["token"]
 

@@ -18,7 +18,7 @@ end
 
   provider :facebook, FACEBOOK_APP_ID, FACEBOOK_SECRET,
             :scope => 'email,user_birthday,read_stream', :display => 'popup',
-            :info_fields => 'first_name, gender, hometown',
+            :info_fields => 'first_name, gender, location',
             :image_size => {:width => '400', :height => '400'}
 
 
