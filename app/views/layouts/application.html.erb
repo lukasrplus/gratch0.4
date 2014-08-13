@@ -35,6 +35,7 @@
                 <li><a href="/">Home</a></li>
 
                 <% if current_user %>
+                <li><%= link_to current_user.name, user_url(current_user.id) %></li>
                 <li><%= link_to "Sign out", signout_url, :method => 'delete' %></li>
                 <% else %>
                 <li><%= link_to "Sign in with Facebook", "/auth/facebook" %></li>
@@ -104,16 +105,6 @@
 
         </div>
 
-        <div class="row">
-
-          <% if current_user %>
-            <h2>Here is a list of your Facebook Friends who also use Gratch.us</h2>
-            <% current_user.facebook.get_connections("me", "friends").each do |friend| %>
-            <h3><%= friend["name"] %></h2>
-            <% end %>
-          <% end %>
-
-        </div>
 
     </div>
   </div>

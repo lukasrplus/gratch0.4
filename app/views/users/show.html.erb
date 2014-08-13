@@ -1,2 +1,31 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="row">
+
+  <div class="col-xs-5">
+
+    <img src="<%= current_user.image %>" class="img img-circle" width="70px" height="70px">
+
+  </div>
+
+  <div class="col-xs-7">
+
+    <h3><%= current_user.name %></h3>
+    <p><%= current_user.gender %></p>
+
+  </div>
+
+
+</div>
+
+<div class="row">
+
+          <% if current_user %>
+            <h2>Here is a list of your Facebook Friends who also use Gratch.us</h2>
+            <% current_user.facebook.get_connections("me", "friends").each do |friend| %>
+            <h3><%= friend["name"] %></h2>
+            <% end %>
+          <% end %>
+
+</div>
+
+
+

@@ -1,10 +1,16 @@
 Gratch04::Application.routes.draw do
 
-  get "users/show"
-  root :to => 'gratches#index'
+  get "static_pages/welcome"
+  root :to => 'static_pages#welcome'
 
+  # USERS
+
+  get "user/:id" => 'users#show', as: 'user'
+
+  # GRATCHES
   resources :gratches
 
+  # OAUTH
   get 'auth/:provider/callback', :to => "sessions#create"
   delete 'signout', :to => 'sessions#destroy', :as => 'signout'
 
