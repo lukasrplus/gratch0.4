@@ -9,6 +9,7 @@ Gratch04::Application.routes.draw do
 
   # GRATCHES
   resources :gratches
+  get 'gratchlist' => 'static_pages#gratchlist', as: 'gratchlist'
 
   # OAUTH
   get 'auth/:provider/callback', :to => "sessions#create"
