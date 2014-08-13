@@ -20,6 +20,10 @@ $(function() {
   $('#click_gratch_details').click(function(e){
     e.preventDefault();
     $('.specific').toggle('slow');
-  })
+  });
+  $('#click_gratch_friends').click(function(e){
+    e.preventDefault();
+    $('.friends').toggle('slow');
+  });
 
 });
