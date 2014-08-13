@@ -4,28 +4,50 @@ $clouds: #ecf0f1;
 $midnightblue: #2c3e50;
 $alizarin: #e74c3c;
 
+$font1: 'Lato', sans-serif;
+$font2: 'Raleway', sans-serif;
+
+
+// BOOTSTRAP OVERWRITES
+
+$navbar-inverse-color: $midnightblue;
+$navbar-inverse-bg: rgba(0,0,0,0.0);
+$navbar-inverse-border: none;
+$navbar-inverse-link-color: $midnightblue;
+$navbar-inverse-brand-color: $alizarin;
+// $navbar-inverse-toggle-icon-bar-bg: $midnightblue;
+// $navbar-inverse-toggle-hover-bg: $midnightblue;
+
+// BOOTSTRAP SASS VARIABLES GO BEFORE HERE
+@import "bootstrap";
 
 
 @media screen and (min-width: 300px) and (max-width: 700px) {
 
+
   h2 {
     font-size: 18px;
+    font-family: $font2;
   }
 
   h3 {
     font-size: 14px;
-    margin-top: 0px;
+    margin-top: 19px;
     margin-bottom: 0px;
+    font-family: $font2;
+    font-weight: 800;
   }
 
   h4 {
     font-size: 8px;
-    color: $alizarin;
-    font-weight: bold;
+    color: $midnightblue;
+    font-weight: italic;
+    font-family: $font2;
   }
 
   p {
     font-size: 10px;
+    font-family: $font2;
   }
 
 
@@ -37,6 +59,7 @@ $alizarin: #e74c3c;
 
 body {
   background-color: $silver;
+  font-family: $font2 !important;
 }
 
 
@@ -46,6 +69,20 @@ body {
   }
 }
 
+.gratch_header {
+  background-color: $alizarin;
+  color: $clouds;
+  text-align: center;
+  padding: 10px 0px;
+
+  p {
+    margin-bottom: 0px;
+    font-size: 9px;
+    font-weight: 700;
+    font-family: $font1;
+  }
+
+}
 
 .gratch_card {
   background-color: $clouds;
@@ -54,9 +91,11 @@ body {
 
 .card_details {
   padding-top: 8px;
+
 }
 
 .party_type {
   color: $alizarin;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 12px;
 }

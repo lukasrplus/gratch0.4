@@ -23,6 +23,9 @@ gem 'omniauth-facebook'
 # Koala
 gem 'koala'
 
+# Font Awesome
+gem "font-awesome-rails"
+
 # Bootstrap SASS
 gem 'bootstrap-sass', '~> 3.2.0'
 
