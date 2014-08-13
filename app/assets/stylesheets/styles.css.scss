@@ -14,10 +14,12 @@ $alizarin: #e74c3c;
 
   h3 {
     font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   h4 {
-    font-size: 9px;
+    font-size: 8px;
     color: $alizarin;
     font-weight: bold;
   }
@@ -38,12 +40,23 @@ body {
 }
 
 
-.gratch_card {
-  background-color: $clouds;
-  color: $midnightblue;
-
+.card_picture {
   img {
     margin: 18px;
   }
+}
 
+
+.gratch_card {
+  background-color: $clouds;
+  color: $midnightblue;
+}
+
+.card_details {
+  padding-top: 8px;
+}
+
+.party_type {
+  color: $alizarin;
+  font-weight: bold;
 }
