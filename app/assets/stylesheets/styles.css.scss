@@ -15,6 +15,10 @@ $navbar-inverse-bg: rgba(0,0,0,0.0);
 $navbar-inverse-border: none;
 $navbar-inverse-link-color: $midnightblue;
 $navbar-inverse-brand-color: $alizarin;
+$btn-primary-color: $clouds;
+$btn-primary-bg: $midnightblue;
+$btn-primary-border: $midnightblue;
+
 // $navbar-inverse-toggle-icon-bar-bg: $midnightblue;
 // $navbar-inverse-toggle-hover-bg: $midnightblue;
 
@@ -32,7 +36,7 @@ $navbar-inverse-brand-color: $alizarin;
 
   h3 {
     font-size: 14px;
-    margin-top: 19px;
+    margin-top: 0px;
     margin-bottom: 0px;
     font-family: $font2;
     font-weight: 800;
@@ -69,7 +73,12 @@ body {
   }
 }
 
+.navbar-brand {
+  font-weight: 700;
+}
+
 .gratch_header {
+   margin-bottom: 30px;
   background-color: $alizarin;
   color: $clouds;
   text-align: center;
@@ -84,9 +93,35 @@ body {
 
 }
 
+.more_details {
+  padding-bottom: 10px;
+}
+
 .gratch_card {
   background-color: $clouds;
   color: $midnightblue;
+
+  button {
+    font-size: 8px;
+    font-family: $font2;
+  }
+
+  p {
+    font-weight: 500;
+    vertical-align: center;
+  }
+
+  a {
+    font-weight: 700;
+    font-size: 9px;
+    color: $clouds;
+    background-color: $midnightblue;
+    padding: 0px;
+    width: 80%;
+    display: block;
+    text-align: center;
+  }
+
 }
 
 .card_details {
