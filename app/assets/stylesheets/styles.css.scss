@@ -1,3 +1,49 @@
+
+$silver: #bdc3c7;
+$clouds: #ecf0f1;
+$midnightblue: #2c3e50;
+$alizarin: #e74c3c;
+
+
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 9px;
+    color: $alizarin;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+
+}
+
+
+
+
+
+body {
+  background-color: $silver;
+}
+
+
 .gratch_card {
-  background-color: black;
+  background-color: $clouds;
+  color: $midnightblue;
+
+  img {
+    margin: 18px;
+  }
+
 }
