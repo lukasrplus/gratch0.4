@@ -15,3 +15,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+  $('#click_gratch_details').click(function(e){
+    e.preventDefault();
+    $('.specific').toggle('slow');
+  })
+
+});
