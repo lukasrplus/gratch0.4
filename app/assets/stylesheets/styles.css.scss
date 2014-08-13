@@ -91,11 +91,11 @@ body {
 }
 
 .logo_landing {
-  background-color: $clouds;
-
+  background: rgba(1,1,1,0.6);
+  margin-top: 150px;
   h1 {
     padding-bottom: 5px;
-    padding-top: 5px;
+    padding-top: 30px;
     margin-bottom: 0px;
   }
 
@@ -108,11 +108,13 @@ body {
   }
 
   .symbols {
+
     p {
       text-align: center;
-      padding-top: 30px;
-      color: $alizarin;
-      margin-bottom: 0px;
+      padding-top: 0px;
+      color: $clouds;
+      margin-bottom: 30px;
+      font-size: 14px;
     }
   }
 }
