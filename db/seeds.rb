@@ -38,3 +38,12 @@ user = User.create([
 
 
                     ])
+
+gratches = Gratch.create([
+  { host_id: '1', datetime: DateTime.new(2014,8,15,7,0,0), city: 'Vienna', party_type: 'PREPARTY', open: 'true'
+  },
+  { host_id: '4', datetime: DateTime.new(2014,8,16,7,0,0), city: 'Salzburg', party_type: 'HOUSEPARTY', open: 'true'
+  },
+  { host_id: '2', datetime: DateTime.new(2014,8,17,7,0,0), city: 'Vienna', party_type: 'BRUNCH', open: 'true'
+  }
+  ])
