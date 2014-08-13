@@ -1,5 +1,6 @@
 Gratch04::Application.routes.draw do
 
+  get "users/show"
   root :to => 'gratches#index'
 
   resources :gratches
