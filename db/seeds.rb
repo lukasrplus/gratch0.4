@@ -47,3 +47,25 @@ gratches = Gratch.create([
   { host_id: '2', datetime: DateTime.new(2014,8,17,7,0,0), city: 'Vienna', party_type: 'BRUNCH', open: 'true'
   }
   ])
+
+showups = Showup.create([
+  { gratch_id: '1', user_id: '2'
+  },
+  { gratch_id: '1', user_id: '3'
+  },
+  { gratch_id: '1', user_id: '4'
+  },
+  { gratch_id: '2', user_id: '1'
+  },
+  { gratch_id: '2', user_id: '3'
+  },
+  { gratch_id: '2', user_id: '2'
+  },
+  { gratch_id: '3', user_id: '5'
+  },
+  { gratch_id: '3', user_id: '1'
+  },
+  { gratch_id: '3', user_id: '3'
+  }
+
+  ])

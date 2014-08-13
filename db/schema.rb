@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140813135803) do
+ActiveRecord::Schema.define(version: 20140813142154) do
 
   create_table "gratches", force: true do |t|
     t.integer  "host_id"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20140813135803) do
     t.datetime "updated_at"
     t.string   "party_type"
     t.boolean  "open"
+  end
+
+  create_table "showups", force: true do |t|
+    t.integer  "gratch_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
