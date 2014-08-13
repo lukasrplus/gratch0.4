@@ -106,7 +106,7 @@ body {
   }
 
   &.click_list {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     background-color: $clouds;
     color: $midnightblue;
   }
@@ -131,6 +131,14 @@ body {
     vertical-align: center;
   }
 
+  .facebook_logo {
+    img {
+      text-align: center;
+      margin-top: 32px;
+      margin-left: 5px;
+    }
+  }
+
 
 }
 
@@ -139,6 +147,15 @@ body {
 
   &.friend_list {
     margin-top: 19px;
+
+    h3 {
+      margin-top: 0px;
+    }
+
+    h4 {
+      margin-top: 3px;
+    }
+
   }
 
 }
