@@ -1,45 +1,197 @@
 
+<div class="container">
 
-<h1>Listing gratches</h1>
+<!-- GRATCHCARD START -->
 
-<table>
-  <thead>
-    <tr>
-      <th>Host</th>
-      <th>Bro1</th>
-      <th>Bro2</th>
-      <th>Bro3</th>
-      <th>Bro4</th>
-      <th>Datetime</th>
-      <th>City</th>
-      <th>Adress</th>
-      <th>Zipcode</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<% @gratches.each do |gratch| %>
+<% host = User.find_by(:id => gratch.host_id) %>
+<% showups = Showup.where(:gratch_id => gratch.id).count %>
 
-  <tbody>
-    <% @gratches.each do |gratch| %>
-      <tr>
-        <td><%= gratch.host_id %></td>
-        <td><%= gratch.bro1_id %></td>
-        <td><%= gratch.bro2_id %></td>
-        <td><%= gratch.bro3_id %></td>
-        <td><%= gratch.bro4_id %></td>
-        <td><%= gratch.datetime %></td>
-        <td><%= gratch.city %></td>
-        <td><%= gratch.adress %></td>
-        <td><%= gratch.zipcode %></td>
-        <td><%= link_to 'Show', gratch %></td>
-        <td><%= link_to 'Edit', edit_gratch_path(gratch) %></td>
-        <td><%= link_to 'Destroy', gratch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="gratch">
 
-<br>
+<div class="row gratch_card">
+
+  <div class="row gratch_preview">
+
+    <div class="col-xs-4 card_picture">
+      <img src="<%= host.image %>" width="70px" height="70px" class="img img-circle">
+    </div>
+
+    <div class="col-xs-8 card_details">
+     <!--  <h4>Wien // 18.08.2014 // 7pm</h4> -->
+      <h3><%= host.name %></h3>
+      <p>and <%= showups %> friends are hosting a<br><span class="party_type"><%= gratch.party_type %></span></p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- START OVERVIEW DETAILS -->
+
+<div class="overview">
+
+<div class="row gratch_header">
+  <div class="col-xs-4">
+    <p><i class="fa fa-calendar-o fa-2x"></i><br><%= gratch.datetime.strftime("%e.%m.%Y") %></p>
+  </div>
+  <div class="col-xs-4">
+    <p><i class="fa fa-clock-o fa-2x"></i><br><%= gratch.datetime.strftime("%H:%M") %></p>
+  </div>
+  <div class="col-xs-4">
+    <p><i class="fa fa-home fa-2x"></i><br><%= gratch.city %></p>
+  </div>
+
+</div>
+
+</div>
+
+<!-- END OVERVIEWDETAILS -->
+
+<!-- START SPECIFIC DETAILS -->
+
+<div class="specific" style="display: none">
+
+<div class="row gratch_header">
+  <div class="col-xs-4">
+    <p><i class="fa fa-male fa-2x"></i><br>100% Boys</p>
+  </div>
+  <div class="col-xs-4">
+    <p><i class="fa fa-heart fa-2x"></i><br>75% Singles</p>
+  </div>
+  <div class="col-xs-4">
+    <p><i class="fa fa-glass fa-2x"></i><br>Free Drinks</p>
+  </div>
+
+</div>
+
+</div>
+
+<!-- END SPECIFIC DETAILS -->
+
+<!-- START LINKLIST -->
+
+<div class="row gratch_header click_list">
+  <div class="col-xs-4" id="click_gratch_friends">
+    <p><i class="fa fa-users fa-2x"></i><br>Paul's guests</p>
+  </div>
+  <div class="col-xs-4" id="click_gratch_details">
+    <p><i class="fa fa-navicon fa-2x"></i><br>Gratch Details</p>
+  </div>
+  <div class="col-xs-4" style="color: #e74c3c">
+    <p><i class="fa fa-check fa-2x"></i><br>Join them</p>
+  </div>
+
+</div>
+
+<!-- END LINKSLIST -->
+
+
+<!-- START FRIENDLIST -->
+
+<div class="friends" style="display: none">
+
+<!-- START FRIIENDLIST-ITEM -->
+<div class="row gratch_card">
+
+  <div class="row gratch_preview">
+
+    <div class="col-xs-4 card_picture">
+      <img src="https://s3.amazonaws.com/uifaces/faces/twitter/dannpetty/128.jpg" class="img img-circle" width="70px" height="70px">
+    </div>
+
+    <div class="col-xs-4 card_details friend_list">
+
+      <h4>GUEST</h4>
+      <h3>Peter</h3>
+      <p>31 years old</p>
+    </div>
+
+    <div class="col-xs-4 facebook_logo">
+
+      <a href=""><img src="http://3.bp.blogspot.com/-ZEMBg7Sl--4/U8K3mJW2MPI/AAAAAAAAAYg/I6NRd4-wmIM/s1600/facebook-logo-png-white-5117.png" width="40px" height="40px"> </a>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- END FRIENDLIST-ITEM -->
+
+<!-- START FRIIENDLIST-ITEM -->
+<div class="row gratch_card">
+
+  <div class="row gratch_preview">
+
+    <div class="col-xs-4 card_picture">
+      <img src="https://s3.amazonaws.com/uifaces/faces/twitter/chandlervdw/128.jpg" class="img img-circle" width="70px" height="70px">
+    </div>
+
+    <div class="col-xs-4 card_details friend_list">
+
+      <h4>GUEST</h4>
+      <h3>Johannes</h3>
+      <p>34 years old</p>
+    </div>
+
+    <div class="col-xs-4 facebook_logo">
+
+      <a href=""><img src="http://3.bp.blogspot.com/-ZEMBg7Sl--4/U8K3mJW2MPI/AAAAAAAAAYg/I6NRd4-wmIM/s1600/facebook-logo-png-white-5117.png" width="40px" height="40px"> </a>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- END FRIENDLIST-ITEM -->
+
+<!-- START FRIIENDLIST-ITEM -->
+<div class="row gratch_card">
+
+  <div class="row gratch_preview">
+
+    <div class="col-xs-4 card_picture">
+      <img src="https://s3.amazonaws.com/uifaces/faces/twitter/flashmurphy/128.jpg" class="img img-circle" width="70px" height="70px">
+    </div>
+
+    <div class="col-xs-4 card_details friend_list">
+
+      <h4>GUEST</h4>
+      <h3>Philipp</h3>
+      <p>28 years old</p>
+    </div>
+
+    <div class="col-xs-4 facebook_logo">
+
+      <a href=""><img src="http://3.bp.blogspot.com/-ZEMBg7Sl--4/U8K3mJW2MPI/AAAAAAAAAYg/I6NRd4-wmIM/s1600/facebook-logo-png-white-5117.png" width="40px" height="40px"> </a>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- END FRIENDLIST-ITEM -->
+
+</div>
+
+<!-- END FRIENDLIST -->
+
+
+
+
+</div>
+
+<% end %>
+
+</div>
+
+
+<!-- GRATCHCARD END -->
+
+
+
+
+</div>
+
 
 <%= link_to 'New Gratch', new_gratch_path %>

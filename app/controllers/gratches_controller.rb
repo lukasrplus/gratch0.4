@@ -5,6 +5,7 @@ class GratchesController < ApplicationController
   # GET /gratches.json
   def index
     @gratches = Gratch.all
+
   end
 
   # GET /gratches/1
