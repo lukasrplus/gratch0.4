@@ -11,20 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812044912) do
+ActiveRecord::Schema.define(version: 20140813135803) do
 
   create_table "gratches", force: true do |t|
     t.integer  "host_id"
-    t.integer  "bro1_id"
-    t.integer  "bro2_id"
-    t.integer  "bro3_id"
-    t.integer  "bro4_id"
     t.datetime "datetime"
     t.string   "city"
     t.string   "adress"
     t.integer  "zipcode"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "party_type"
+    t.boolean  "open"
   end
 
   create_table "users", force: true do |t|
@@ -37,6 +35,9 @@ ActiveRecord::Schema.define(version: 20140812044912) do
     t.string   "city"
     t.string   "oauth_token"
     t.string   "gender"
+    t.string   "fb_url"
+    t.boolean  "single"
+    t.date     "dob"
   end
 
 end
