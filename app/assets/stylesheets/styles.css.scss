@@ -66,6 +66,18 @@ $btn-primary-border: $midnightblue;
 body {
   background-color: $silver;
   font-family: $font2 !important;
+
+  &.landing_body {
+    background-image: url('https://s3-us-west-2.amazonaws.com/gratch/bg01.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+.welcome {
+
+
+
 }
 
 .gratch {

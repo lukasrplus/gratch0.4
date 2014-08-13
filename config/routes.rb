@@ -1,6 +1,7 @@
 Gratch04::Application.routes.draw do
 
-  get "static_pages/welcome"
+  get "/welcome" => "static_pages#welcome"
+
   root :to => 'static_pages#welcome'
 
   # USERS
