@@ -129,7 +129,13 @@
     </p>
 
     <% if current_user %>
-    <h2><%= current_user.facebook_friends_ids_array %></h2>
+    <% collection_of_friends = current_user.facebook_friends_collection %>
+      <% collection_of_friends.each do |c| %>
+        <div class="row">
+        <img src="http://graph.facebook.com/<%= c['id'] %>/picture">
+        <h2><%= c['name'] %></h2>
+        </div>
+      <% end %>
     <% end %>
 
   </div>

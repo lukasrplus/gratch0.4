@@ -54,4 +54,8 @@ class User < ActiveRecord::Base
     return friends_ids_array
   end
 
+  def facebook_friends_collection
+    friends_collection = self.facebook.get_connections('me', 'friends')
+  end
+
 end
