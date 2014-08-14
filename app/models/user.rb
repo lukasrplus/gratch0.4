@@ -36,4 +36,9 @@ class User < ActiveRecord::Base
     @facebook ||= Koala::Facebook::API.new(oauth_token)
   end
 
+  def facebook_friends_array
+    array = self.facebook.get_connections('me', 'friends')
+    return array
+  end
+
 end
