@@ -17,13 +17,38 @@
 //= require_tree .
 
 $(function() {
-  $('#click_gratch_details').click(function(e){
-    e.preventDefault();
-    $('.specific').toggle('slow');
+  // $('#click_gratch_details').click(function(e){
+  //   e.preventDefault();
+  //   $('.specific').toggle('slow');
+  // });
+
+
+  // $('#click_gratch_friends').click(function(e){
+  //   e.preventDefault();
+  //   $('.friends').toggle('slow');
+  // });
+
+  // START OF INDIVIDUAL TOGGLES ON GRATCH LIST
+
+  var gratch_id = $('.click_list').attr('id');
+  console.log(gratch_id);
+
+  var number_of_gratches = $('.click_list').size(function(){
+    return this.lenght;
   });
+  console.log(number_of_gratches);
+
   $('#click_gratch_friends').click(function(e){
     e.preventDefault();
-    $('.friends').toggle('slow');
+    console.log(this.attr('data-friends'));
+
   });
+
+  var test = $('#click_gratch_friends').attr('data-friends');
+
+  console.log(test);
+
+
+  // END OF INDIVIDUAL TOGGLES ON GRATCH LIST
 
 });
