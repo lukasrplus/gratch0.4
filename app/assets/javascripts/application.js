@@ -72,7 +72,7 @@ $(function(){
           version    : 'v2.0'
         });
 
-        FB.getLoginStatus(function(response) {
+      FB.getLoginStatus(function(response) {
           console.log(response)
         if (response.status === 'connected') {
           var status = response.status
@@ -82,17 +82,20 @@ $(function(){
         // MAKE ADJUSTMENTS TO FACEBOOK POPUP HERE
         // FB.login();
         }
-        $('.card_picture').click(function(){
+        $('.join_click').click(function(){
+          var item = $(this)
+          var gratch_id = item.data('click-join')
+          console.log(gratch_id)
           if (status === 'connected') {
             // PAST DIV TOGGLE FORM HERE
             alert('IN');
           }
           else {
             // PAST FACEBOOK LOGIN FORM HERE
-            alert('OUT');
+            $('#facebook_login_id_' + gratch_id).toggle('slow');
           }
         });
-        });
+      });
 
 
 
