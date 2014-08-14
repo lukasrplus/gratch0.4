@@ -154,6 +154,39 @@ body {
   }
 }
 
+.gratch_application {
+
+      color: $clouds;    h2 {
+
+    }
+
+  .myfriends {
+    background-color: $alizarin;
+    height: 150px;
+    text-align: center;
+    font-family: $font2;
+  }
+
+  .myfriends_list {
+    background-color: $clouds;
+    text-align: center;
+    font-family: $font2;
+
+    h2 {
+      color: $alizarin;
+      margin-top: 0px;
+      padding-top: 20px;
+    }
+
+    p {
+      color: $midnightblue;
+
+    }
+
+  }
+
+}
+
 .gratch_header {
    margin-bottom: 0px;
   background-color: $alizarin;
