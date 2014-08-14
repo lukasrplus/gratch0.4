@@ -37,8 +37,21 @@ class User < ActiveRecord::Base
   end
 
   def facebook_friends_array
-    array = self.facebook.get_connections('me', 'friends')
-    return array
+    friends_array = Array.new
+    friends_collection = self.facebook.get_connections('me', 'friends')
+    friends_collection.each do |c|
+      friends_array << c["name"]
+    end
+    return friends_array
+  end
+
+  def facebook_friends_ids_array
+    friends_ids_array = Array.new
+    friends_collection = self.facebook.get_connections('me', 'friends')
+    friends_collection.each do |c|
+      friends_ids_array << c["id"]
+    end
+    return friends_ids_array
   end
 
 end
