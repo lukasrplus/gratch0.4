@@ -134,6 +134,25 @@ body {
   font-weight: 700;
 }
 
+.facebook_login_content {
+  background-color: $alizarin;
+  height: 165px;
+  text-align: center;
+
+  h2 {
+    color: $clouds;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  a:hover {
+    background-color: $alizarin;
+  }
+}
+
 .gratch_header {
    margin-bottom: 0px;
   background-color: $alizarin;
