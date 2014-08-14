@@ -66,9 +66,13 @@ $(function(){
   $('.details_click').click(function(){
     var item = $(this);
     var gratch_id = item.data('click-details');
-
     $('#specific_id_' + gratch_id).toggle('slow');
+  });
 
+  $('.friends_click').click(function(){
+    var item = $(this);
+    var gratch_id = item.data('click-friends');
+    $('#friends_id_' + gratch_id).toggle('slow');
   });
 
 });
