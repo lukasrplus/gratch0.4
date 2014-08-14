@@ -61,7 +61,61 @@
 // });
 
 
+
+
 $(function(){
+
+  window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '526730637459521',
+          xfbml      : true,
+          version    : 'v2.0'
+        });
+
+        FB.getLoginStatus(function(response) {
+          console.log(response)
+        if (response.status === 'connected') {
+          var status = response.status
+          }
+          else {
+          var status = response.status
+        // MAKE ADJUSTMENTS TO FACEBOOK POPUP HERE
+        // FB.login();
+        }
+        $('.card_picture').click(function(){
+          if (status === 'connected') {
+            // PAST DIV TOGGLE FORM HERE
+            alert('IN');
+          }
+          else {
+            // PAST FACEBOOK LOGIN FORM HERE
+            alert('OUT');
+          }
+        });
+        });
+
+
+
+
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+
+
+
+
+
+
+
+
+
 
   $('.details_click').click(function(){
     var item = $(this);
@@ -74,5 +128,6 @@ $(function(){
     var gratch_id = item.data('click-friends');
     $('#friends_id_' + gratch_id).toggle('slow');
   });
+
 
 });
