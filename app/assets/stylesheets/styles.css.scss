@@ -163,7 +163,6 @@ body {
   .myfriends {
     background-color: $alizarin;
     height: 150px;
-    text-align: center;
     font-family: $font2;
   }
 
@@ -176,12 +175,27 @@ body {
       color: $alizarin;
       margin-top: 0px;
       padding-top: 20px;
+      text-align: center;
     }
 
     p {
       color: $midnightblue;
+    }
+
+    .gratch_card {
+      h3, h4 {
+        text-align: left;
+        margin: 0px;
+      }
+
+      .friends_list {
+        margin-top: 30px;
+      }
 
     }
+
+
+
 
   }
 
@@ -229,6 +243,10 @@ body {
   background-color: $clouds;
   color: $midnightblue;
 
+  label {
+    width: 100%;
+  }
+
   button {
     font-size: 8px;
     font-family: $font2;
@@ -246,8 +264,6 @@ body {
       margin-left: 5px;
     }
   }
-
-
 }
 
 .card_details {
