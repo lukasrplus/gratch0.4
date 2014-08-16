@@ -10,6 +10,7 @@ Gratch04::Application.routes.draw do
 
   # GRATCHES
   resources :gratches
+  get '/gratches/new/:gratch_id' => 'gratches#new'
   get 'gratchlist' => 'static_pages#gratchlist', as: 'gratchlist'
 
   # OAUTH

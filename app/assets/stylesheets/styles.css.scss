@@ -17,8 +17,8 @@ $navbar-inverse-link-color: $midnightblue;
 $navbar-inverse-brand-color: $alizarin;
 $navbar-margin-bottom: 5px;
 $btn-primary-color: $clouds;
-$btn-primary-bg: $midnightblue;
-$btn-primary-border: $midnightblue;
+$btn-primary-bg: $alizarin;
+$btn-primary-border: $alizarin;
 
 // $navbar-inverse-toggle-icon-bar-bg: $midnightblue;
 // $navbar-inverse-toggle-hover-bg: $midnightblue;
@@ -170,6 +170,11 @@ body {
     background-color: $clouds;
     text-align: center;
     font-family: $font2;
+
+    button {
+      margin: 10px 0px 20px 0px;
+      border-radius: 0px;
+    }
 
     h2 {
       color: $alizarin;

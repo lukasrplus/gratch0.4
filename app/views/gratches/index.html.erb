@@ -124,48 +124,12 @@
     <h2>Come with me!</h2>
     <p>
       Select the friends who want join this Gratch with you. <br>
-      And don't forget to leave a nice line for <%= host.name %>. <br>
-      <span style="font-size: 7px">Your friends have to be on Gratch to be listed here (say THX to Facebook...)</span>
+      And don't forget to leave a nice line for <%= host.name %>. <br
     </p>
 
-
-
-    <% if current_user %>
-
-      <%= form_tag gratches_url %>
-
-        <% collection_of_friends = current_user.facebook_friends_collection %>
-        <% collection_of_friends.each do |c| %>
-
-        <div class="gratch_card">
-
-            <label for="<%= c['id'] %>">
-              <div class="row gratch_preview">
-                <div class="col-xs-4 card_picture">
-                  <img src="http://graph.facebook.com/<%= c['id'] %>/picture" class="img img-circle" width="70px" height="70px">
-                </div>
-                <div class="col-xs-4 card_details friends_list">
-                  <h4>FRIEND</h4>
-                  <h3 style="color: #2c3e50"><%= c['name'] %></h3>
-                </div>
-                <div class="col-xs-4">
-                <!-- HERE COMES THE SELECT TAG -->
-                </div>
-              </div>
-            </label>
-
-         </div>
-
-      <% end %>
-
-      <%= submit_tag %>
-
-      <% end %>
-
-
-    <% end %>
-
-
+    <a href="/gratches/new/<%= gratch.id %>">
+    <button class="btn btn-primary">Apply for this Gratch and select friends</button>
+    </a>
 
   </div>
 
