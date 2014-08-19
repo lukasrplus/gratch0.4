@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140813142154) do
+ActiveRecord::Schema.define(version: 20140819084327) do
+
+  create_table "bid_friends", force: true do |t|
+    t.string   "bid_id"
+    t.string   "friend_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bids", force: true do |t|
+    t.integer  "gratch_id"
+    t.integer  "applicant_id"
+    t.integer  "number_of_friends"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "gratches", force: true do |t|
     t.integer  "host_id"

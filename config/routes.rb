@@ -1,5 +1,6 @@
 Gratch04::Application.routes.draw do
 
+  get "bids/new"
   get "/welcome" => "static_pages#welcome"
 
   root :to => 'static_pages#welcome'
@@ -7,6 +8,7 @@ Gratch04::Application.routes.draw do
   # USERS
 
   get "user/:id" => 'users#show', as: 'user'
+  get "bid/new/:gratch_id" => 'bids#new', as: 'new_bid'
 
   # GRATCHES
   resources :gratches

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gratch_id: 1
+  applicant_id: 1
+  number_of_friends: 1
+
+two:
+  gratch_id: 1
+  applicant_id: 1
+  number_of_friends: 1
