@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BidFriendTest < ActiveSupport::TestCase
+class BidfriendTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
