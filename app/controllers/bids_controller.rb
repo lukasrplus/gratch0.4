@@ -7,6 +7,7 @@ class BidsController < ApplicationController
     # else
     #   redirect_to root_url
     # end
+    @bid = Bid.new
   end
 
   def create

@@ -11,7 +11,7 @@ Gratch04::Application.routes.draw do
 
   # BIDS
   get "bid/new/:gratch_id" => 'bids#new', as: 'new_bid'
-  post "bids/create" => 'bids#create', as: 'create_bid'
+  post "bids" => 'bids#create'
 
   # GRATCHES
   resources :gratches

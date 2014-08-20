@@ -18,7 +18,7 @@
 
 
 
-                  <%= form_tag create_bid_url, method: 'post' -%>
+                  <%= form_for @bid do |f| %>
 
                   <% collection_of_friends = current_user.facebook_friends_collection %>
 
@@ -37,7 +37,7 @@
                             <h3 style="color: #2c3e50"><%= c['name'] %></h3>
                           </div>
                           <div class="col-xs-4">
-                          <%= check_box_tag 'friend_fb_id', c['id']   %>
+                          <%= f.check_box :friend_fb_id, c['id']   %>
                           </div>
                         </div>
                       </label>
@@ -46,6 +46,7 @@
                   <!-- END OF FORMTAG -->
                   <%= submit_tag 'Send' %>
 
+                  <% end %>
 
                    </div>
                    <!-- END OF DO LOOP -->
