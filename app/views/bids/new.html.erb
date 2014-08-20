@@ -51,7 +51,11 @@
                   <h4 style="text-align: center; margin-bottom: 10px">Leave a sweet message to increase your chances.</h4>
                   <%= f.text_area :message, {:class => 'form-control', :placeholder => 'Hey, you guys are cute...'} %>
 
-                  <%= submit_tag 'Send' %>
+                  <%= submit_tag 'Send your Gratch request', :class => 'btn btn-primary' %>
+
+                  <div class="container">
+                  <p> <span class="extra_info">The host of this Gratch will be notified by your request through email. Only your names and your message will be transferred. If you host welcomes you and your friends, you will receive a notifaction including the adress details through email. <br> GODD LUCK!</span></p>
+                  </div>
 
                   <% end %>
 
