@@ -13,6 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require icheck.js
 //= require turbolinks
 //= require_tree .
 
@@ -115,7 +116,15 @@ $(function(){
 
 
 
+// PLUGIN FOR NICER CHECKBOXES START
 
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_flat-red',
+    radioClass: 'iradio_flat'
+  });
+
+
+// PLUGIN END
 
 
 

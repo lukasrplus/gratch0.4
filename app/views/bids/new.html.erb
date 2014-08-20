@@ -39,7 +39,9 @@
                             <h3 style="color: #2c3e50"><%= c['name'] %></h3>
                           </div>
                           <div class="col-xs-4">
-                          <%= f.check_box :id, {:multiple => true}, c['id'], nil   %>
+                            <div class="roundedTwo">
+                              <%= f.check_box :id, {:multiple => true}, c['id'], nil   %>
+                            </div>
                           </div>
                         </div>
                       </label>
