@@ -99,7 +99,7 @@ $(function(){
           console.log(gratch_id)
           if (status === 'connected') {
             // PAST DIV TOGGLE FORM HERE
-            alert('IN');
+            $('#gratch_application_id_' + gratch_id).toggle('slow');
           }
           else {
             // PAST FACEBOOK LOGIN FORM HERE
