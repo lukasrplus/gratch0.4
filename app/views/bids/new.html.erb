@@ -32,7 +32,7 @@
                       <label for="<%= c['id'] %>">
                         <div class="row gratch_preview">
                           <div class="col-xs-4 card_picture">
-                            <img src="http://graph.facebook.com/<%= c['id'] %>/picture" class="img img-circle" width="70px" height="70px">
+                            <img src="http://graph.facebook.com/v2.1/<%= c['id'] %>/picture?height=300&width=300" class="img img-circle" width="70px" height="70px">
                           </div>
                           <div class="col-xs-5 card_details friends_list">
                             <h4>FRIEND</h4>
@@ -48,8 +48,8 @@
 
                   <% end %>
                   <!-- END OF FORMTAG -->
-
-                  <%= f.text_area :message, {:class => 'form-control'} %>
+                  <h4 style="text-align: center; margin-bottom: 10px">Leave a sweet message to increase your chances.</h4>
+                  <%= f.text_area :message, {:class => 'form-control', :placeholder => 'Hey, you guys are cute...'} %>
 
                   <%= submit_tag 'Send' %>
 

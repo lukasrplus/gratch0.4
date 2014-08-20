@@ -14,7 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require icheck.js
-//= require turbolinks
+
 //= require_tree .
 
 // $(function() {
@@ -66,6 +66,16 @@
 
 $(function(){
 
+  // PLUGIN FOR NICER CHECKBOXES START
+
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_flat-red',
+    radioClass: 'iradio_flat'
+  });
+
+
+// PLUGIN END
+
   window.fbAsyncInit = function() {
         FB.init({
           appId      : '526730637459521',
@@ -116,15 +126,7 @@ $(function(){
 
 
 
-// PLUGIN FOR NICER CHECKBOXES START
 
-  $('input').iCheck({
-    checkboxClass: 'icheckbox_flat-red',
-    radioClass: 'iradio_flat'
-  });
-
-
-// PLUGIN END
 
 
 
