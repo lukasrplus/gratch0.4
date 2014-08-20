@@ -11,6 +11,7 @@ class BidsController < ApplicationController
   end
 
   def create
+    params[:bid] ||= [] if params.has_key?(:bid)
     params.require(:bid).permit(:applicant_id => [])
     hash = params
     stop
