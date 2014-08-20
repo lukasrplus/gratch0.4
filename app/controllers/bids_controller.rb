@@ -11,7 +11,7 @@ class BidsController < ApplicationController
   end
 
   def create
-    params.require(:bid).permit(:friend_fb_id => [])
+    params.require(:bid).permit(:applicant_id => [])
     hash = params
     stop
     redirect_to root_url
