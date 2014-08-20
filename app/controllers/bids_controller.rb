@@ -11,11 +11,14 @@ class BidsController < ApplicationController
   end
 
   def create
-    params[:bid] ||= [] if params.has_key?(:bid)
+   if params.has_key?(:bid)
     params.require(:bid).permit(:applicant_id => [])
     hash = params
-    stop
+    # HAS TO BE ADOPTED
     redirect_to root_url
+    # HAS TO BE ADOPTED
+    else redirect_to gratches_url
+    end
   end
 
 end
