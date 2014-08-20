@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140820150233) do
+ActiveRecord::Schema.define(version: 20140820151413) do
 
   create_table "bid_friends", force: true do |t|
     t.string   "bid_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140820150233) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "message"
+    t.boolean  "confirmed",         default: false
   end
 
   create_table "gratches", force: true do |t|
