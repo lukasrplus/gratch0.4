@@ -8,7 +8,10 @@ Gratch04::Application.routes.draw do
   # USERS
 
   get "user/:id" => 'users#show', as: 'user'
+
+  # BIDS
   get "bid/new/:gratch_id" => 'bids#new', as: 'new_bid'
+  post "bids/create" => 'bids#create', as: 'create_bid'
 
   # GRATCHES
   resources :gratches

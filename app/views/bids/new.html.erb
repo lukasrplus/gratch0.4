@@ -16,12 +16,16 @@
 
           <p> <span style="font-size: 7px">Your friends have to be on Gratch to be listed here (say THX to Facebook...)</span></p>
 
-                <% if current_user %>
+
+
+                  <%= form_tag create_bid_url, method: 'post' -%>
 
                   <% collection_of_friends = current_user.facebook_friends_collection %>
-                  <% collection_of_friends.each do |c| %>
+
 
                   <div class="gratch_card">
+
+                  <% collection_of_friends.each do |c| %>
 
                       <label for="<%= c['id'] %>">
                         <div class="row gratch_preview">
@@ -33,16 +37,22 @@
                             <h3 style="color: #2c3e50"><%= c['name'] %></h3>
                           </div>
                           <div class="col-xs-4">
-                          <!-- HERE COMES THE SELECT TAG -->
+                          <%= check_box_tag 'friend_fb_id', c['id']   %>
                           </div>
                         </div>
                       </label>
 
-                   </div>
-
                   <% end %>
+                  <!-- END OF FORMTAG -->
+                  <%= submit_tag 'Send' %>
 
-                <% end %>
+
+                   </div>
+                   <!-- END OF DO LOOP -->
+
+            <!--  -->
+                  <!-- END OF IF STATEMENT -->
+
 
         </div>
 
