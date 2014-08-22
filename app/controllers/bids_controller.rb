@@ -31,7 +31,7 @@ class BidsController < ApplicationController
 
 
     # HAS TO BE ADOPTED
-    redirect_to root_url
+    redirect_to gratches_url
     # HAS TO BE ADOPTED
     else redirect_to gratches_url
     end
