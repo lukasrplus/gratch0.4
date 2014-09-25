@@ -16,6 +16,9 @@ group :production do
   gem 'rails_12factor'
 end
 
+# Mobile-fu
+gem 'mobile-fu', '~> 1.3.1'
+
 # Omniauth
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
