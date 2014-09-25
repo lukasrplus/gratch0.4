@@ -18,7 +18,7 @@ private
 
   def desktop_redirect
     if mobile_device? == nil
-      redirect_to "http://www.rydercup.com"
+      redirect_to "http://hi.gratch.us/"
     end
   end
 
